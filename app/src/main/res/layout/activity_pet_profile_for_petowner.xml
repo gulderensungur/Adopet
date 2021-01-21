@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/paws2"
+    tools:context=".Pet_Profile_forAdopter">
+
+    <ImageView
+        android:id="@+id/Pet_spec_photo"
+        android:layout_width="400dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="60dp"
+        app:srcCompat="@drawable/pet9" />
+
+    <TextView
+        android:id="@+id/p_owner_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginRight="15dp"
+        android:text="Pet Owner Name:John Watson"
+        android:textColor="#292222"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/pet_name_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_below="@id/p_owner_name"
+        android:text="Pet's Name: Snow"
+        android:textColor="#292222"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/pet_type_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_below="@id/pet_name_1"
+        android:text="Dog/Golden Retriever"
+        android:textColor="#292222"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/pet_age_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_below="@id/pet_type_1"
+        android:text="4 months"
+        android:textColor="#292222"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/pet_other_features_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_below="@id/pet_age_1"
+        android:text="All their vaccinations are complete."
+        android:textColor="#292222"
+        android:textSize="20sp" />
+
+
+
+
+
+</RelativeLayout>

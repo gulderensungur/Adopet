@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/paws2"
+    tools:context=".AdopterActivity">
+
+
+
+
+    <ImageView
+        android:id="@+id/petphoto_1"
+        android:layout_width="107dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/All_pets_1"
+        app:srcCompat="@drawable/pet9"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:id="@+id/txt_pet_name"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="70dp"
+        android:text="Snow"
+        android:textColor="#121111"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/petphoto_1"
+        app:layout_constraintTop_toBottomOf="@+id/All_pets_1" />
+
+    <ImageButton
+        android:id="@+id/edit_button"
+        android:layout_width="47dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="105dp"
+        app:srcCompat="@android:drawable/ic_menu_edit"/>
+
+    <ImageButton
+        android:id="@+id/delete_button"
+        android:layout_width="47dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="105dp"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerw"
+        android:layout_width="match_parent"
+        android:layout_height="538dp"
+        android:layout_above="@+id/bottom_nav"
+        android:layout_below="@id/petphoto_1"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/petphoto_1" />
+
+    <Button
+        android:id="@+id/button_chng_role"
+        android:background="@drawable/input_design"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Role"
+        android:textColor="#633F3F" />
+
+    <Button
+        android:id="@+id/create_another"
+        android:background="@drawable/input_design"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="300dp"
+        android:text="Create Another Pet"
+        android:clickable="true"
+        android:textColor="@color/colorPrimaryDark" />
+
+
+</RelativeLayout>

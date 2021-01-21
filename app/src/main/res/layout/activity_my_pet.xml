@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/paws2"
+        tools:context=".MyPetActivity">
+
+
+    <ImageButton
+        android:id="@+id/delete_button"
+        android:layout_width="47dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="65dp"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+    <ImageView
+        android:id="@+id/pet1"
+        android:layout_width="107dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/All_pets_1"
+        app:srcCompat="@drawable/pet9" />
+
+    <TextView
+        android:id="@+id/pets_name"
+        android:layout_width="292dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="30dp"
+        android:text="Snow"
+        android:textColor="#121111"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pet1"
+        app:layout_constraintTop_toBottomOf="@+id/All_pets_1" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerw"
+        android:layout_width="match_parent"
+        android:layout_height="575dp"
+        android:layout_above="@+id/bottom_nav"
+        android:layout_below="@id/pet1"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/petphoto_1" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryDark"
+        app:itemIconTint="@color/cardview_light_background"
+        app:labelVisibilityMode="unlabeled"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_navigation" />
+
+
+
+</RelativeLayout>
+
+

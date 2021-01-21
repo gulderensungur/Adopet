@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1092002888124",
+    "project_id": "adopet-f2251",
+    "storage_bucket": "adopet-f2251.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1092002888124:android:c05d24f2b9b5f0a65b93b9",
+        "android_client_info": {
+          "package_name": "com.example.adopet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1092002888124-750655qaosle1tbn3hjhphumlt8q3atu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUzrTIdYzVs6at9-INDlSApSHAmy4a9D8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1092002888124-750655qaosle1tbn3hjhphumlt8q3atu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filters"
+        android:textSize="20sp"
+        />
+    
+    <CheckBox
+        android:id="@+id/only_dogs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Only dogs" />
+
+    <CheckBox
+        android:id="@+id/only_cats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Only cats" />
+
+    <CheckBox
+        android:id="@+id/male_pets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Male" />
+
+    <CheckBox
+        android:id="@+id/female_pets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Female" />
+
+    <Button
+        android:id="@+id/refresh_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REFRESH"
+        android:background="@drawable/buttons"
+        android:textColor="@android:color/white"/>
+
+
+</LinearLayout>

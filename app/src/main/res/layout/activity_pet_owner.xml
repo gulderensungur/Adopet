@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/pet6"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <Button
+        android:id="@+id/btn_create_pet_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/buttons"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:text="Create a Pet Profile"
+        android:textSize="18sp"
+        />
+
+
+
+
+    <TextView
+        android:id="@+id/txt_edit_pet_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="206dp"
+        android:layout_marginTop="138dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textAllCaps="false"
+        android:text="Go to My Pet Profile"
+        android:textSize="19sp"
+
+
+
+            />
+
+
+
+
+
+
+
+</RelativeLayout>

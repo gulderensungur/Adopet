@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Adopet</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add">Add</string>
+    <string name="name_surname">Name Surname</string>
+    <string name="e_mail">E-mail</string>
+    <string name="password">Password</string>
+    <string name="create_account">Create Account</string>
+</resources>

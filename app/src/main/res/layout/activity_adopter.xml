@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/paws2"
+    tools:context=".AdopterActivity">
+
+    <TextView
+        android:id="@+id/All_pets_1"
+        android:layout_width="130dp"
+        android:layout_height="31dp"
+        android:text="All Pets"
+        android:layout_below="@id/chng_role_1"
+        android:textColor="#000000"
+        android:textColorLink="#050505"
+        android:textSize="25sp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delete_button" />
+
+    <ImageButton
+        android:id="@+id/delete_button"
+        android:layout_width="47dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="350dp"
+        android:background="@drawable/input_design"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/filtre_button" />
+
+    <TextView
+        android:id="@+id/chng_role_1"
+        android:layout_width="98dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="16dp"
+        android:text="Change Role"
+        android:textColor="#633F3F"
+        app:layout_constraintBottom_toTopOf="@+id/All_pets_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/petphoto_1"
+        android:layout_width="107dp"
+        android:layout_height="105dp"
+        android:layout_below="@id/All_pets_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/All_pets_1"
+        app:srcCompat="@drawable/pet9" />
+
+    <TextView
+        android:id="@+id/txt_pet_name"
+        android:layout_width="320dp"
+        android:layout_height="103dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="100dp"
+        android:text="Pet Specs , we will use Recycler wiev. This is just for demonstration."
+        android:textColor="#121111"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/petphoto_1"
+        app:layout_constraintTop_toBottomOf="@+id/All_pets_1" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerw"
+        android:layout_width="match_parent"
+        android:layout_height="575dp"
+        android:layout_above="@+id/bottom_nav"
+        android:layout_below="@id/petphoto_1"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/petphoto_1" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryDark"
+        app:itemIconTint="@color/cardview_light_background"
+        app:labelVisibilityMode="unlabeled"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_navigation" />
+
+
+</RelativeLayout>
