@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/paws2"
+    tools:context=".MyPetActivity">
+
+    <ImageView
+        android:layout_marginStart="5dp"
+        android:id="@+id/user_pp_po"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/message_box_2"
+        android:layout_below="@id/allmessages_po"
+        android:layout_marginLeft="5dp" />
+
+    <TextView
+        android:layout_alignStart="@+id/user_pp_po"
+        android:id="@+id/user_name_1_po"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:text="Hasan Günyüzügörmez"
+        android:layout_below="@id/allmessages_po"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_alignStart="@+id/resimKullanici"
+        android:id="@+id/last_message_po"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:layout_marginLeft="5dp"
+        android:text="..."
+        android:layout_below="@id/user_name_1_po"
+        android:textColor="@color/colorPrimary"
+        android:textSize="13sp"
+        />
+
+    <TextView
+        android:id="@+id/allmessages_po"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  Message Box"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="30sp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/user_pp_po"/>
+
+    <ImageView
+        android:id="@+id/msg_box_sym_po"
+        android:layout_width="36dp"
+        android:layout_height="38dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="142dp"
+        android:layout_marginLeft="338dp"
+        android:layout_marginTop="4dp"
+        android:layout_toEndOf="@+id/allmessages_po"
+        android:background="@android:color/transparent"
+        app:itemIconTint="@color/colorPrimaryDark"
+        app:srcCompat="@drawable/message_box" />
+
+</RelativeLayout>

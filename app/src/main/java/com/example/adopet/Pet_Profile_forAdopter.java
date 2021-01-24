@@ -10,7 +10,6 @@ import android.widget.Button;
 public class Pet_Profile_forAdopter extends AppCompatActivity {
 
     private Button BackToAdopterActivity;
-
     private Button SendMessageToOwner;
 
     @Override

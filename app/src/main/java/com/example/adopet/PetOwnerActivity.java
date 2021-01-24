@@ -14,7 +14,6 @@ import android.widget.Toast;
 public class PetOwnerActivity extends AppCompatActivity {
 
     private Button CreateProfile;
-    private TextView GoProfile;
     Context context = this;
 
 
@@ -25,7 +24,6 @@ public class PetOwnerActivity extends AppCompatActivity {
 
 
         CreateProfile = (Button) findViewById(R.id.btn_create_pet_profile);
-        GoProfile = (TextView) findViewById(R.id.txt_edit_pet_profile);
 
 
         CreateProfile.setOnClickListener(new View.OnClickListener() {
@@ -33,15 +31,6 @@ public class PetOwnerActivity extends AppCompatActivity {
             public void onClick(View view){
 
                 Intent intent = new Intent(PetOwnerActivity.this, EditMyPetActivity.class);
-                startActivity(intent);
-
-            }
-        });
-        GoProfile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view){
-
-                Intent intent = new Intent(PetOwnerActivity.this, MyPetActivity.class);
                 startActivity(intent);
 
             }

@@ -50,7 +50,7 @@ public class MyPetActivity extends AppCompatActivity {
                             selectedFragment = new MyPetFragment();
                             break;
                         case R.id.message_page:
-                            selectedFragment = new MessagesFragment();
+                            selectedFragment = new MessagesFragmentPo();
                             break;
 
                     }
