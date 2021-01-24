@@ -13,7 +13,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.adopet.Model.Users;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -49,26 +48,7 @@ public class loginActivity extends AppCompatActivity {
         loadingBar = new ProgressDialog(this);
         firebaseUser = mFAuth.getCurrentUser(); // authenticated user
 
-        if(firebaseUser != null){ // check user session
 
-            Intent i = new Intent(loginActivity.this,HomeActivity.class);
-            startActivity(i);
-            finish();
-        }
-
-       /* mAutStateListener = new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                FirebaseUser mFirebaseUser = mFAuth.getCurrentUser();
-                if (mFirebaseUser != null) {
-                    Toast.makeText(loginActivity.this, "You are logged in", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(loginActivity.this, HomeActivity.class);
-                    startActivity(intent);
-                }else {
-                    Toast.makeText(loginActivity.this, "Please login", Toast.LENGTH_SHORT).show();
-                }
-            }
-        }; */
       LoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -93,7 +73,7 @@ public class loginActivity extends AppCompatActivity {
                 loadingBar.setCanceledOnTouchOutside(false);
                 loadingBar.show();
 
-                mFAuth.createUserWithEmailAndPassword(mail, password).addOnCompleteListener( new OnCompleteListener<AuthResult>() {
+                mFAuth.signInWithEmailAndPassword(mail, password).addOnCompleteListener( new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
@@ -111,9 +91,4 @@ public class loginActivity extends AppCompatActivity {
 
     }
 
-   /* @Override
-    protected void onStart() {
-        super.onStart();
-        mFAuth.addAuthStateListener(mAutStateListener);
-    } */
 }

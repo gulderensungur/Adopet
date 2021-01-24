@@ -8,9 +8,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 public class EditMyPetActivity extends AppCompatActivity {
@@ -19,7 +22,12 @@ public class EditMyPetActivity extends AppCompatActivity {
     private EditText PetName, PetType, PetOwnerName, PetAge, OtherFeatures;
     private ProgressDialog loadingbar;
     Context context = this;
-    ImageButton imagebutton;
+    ImageView petimage;
+    Spinner petdogorcat;
+    Spinner petsgender;
+
+    String[] array_spinner = new String[]{"Dog", "Cat"};
+    String[] array_gender_spinner= new String[]{"Male","Female"};
 
 
     @Override
@@ -27,12 +35,12 @@ public class EditMyPetActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_my_pet);
 
-        imagebutton = (ImageButton) findViewById(R.id.imgbtn);
+        petimage = (ImageView) findViewById(R.id.imgofpet);
 
-        imagebutton.setOnClickListener(new View.OnClickListener() {
+        petimage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                imagebutton.setImageResource(R.drawable.pet9);
+                petimage.setImageResource(R.drawable.pet9);
             }
         });
 
@@ -43,6 +51,20 @@ public class EditMyPetActivity extends AppCompatActivity {
         PetAge = (EditText) findViewById(R.id.txt_age);
         OtherFeatures = (EditText) findViewById(R.id.txt_features);
         loadingbar = new ProgressDialog(this);
+
+        petsgender = (Spinner) findViewById(R.id.petgender);
+        petdogorcat = (Spinner) findViewById(R.id.dogorcat);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, array_spinner);
+
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, array_gender_spinner);
+
+        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        petsgender.setAdapter(adapter2);
+        petdogorcat.setAdapter(adapter);
+
 
 
         CreateButton.setOnClickListener(new View.OnClickListener() {

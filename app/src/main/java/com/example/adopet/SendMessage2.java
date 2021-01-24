@@ -21,7 +21,7 @@ public class SendMessage2 extends AppCompatActivity {
         BackToPetProfileforAdopter2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SendMessage2.this, AdopterActivity.class);
+                Intent intent = new Intent(SendMessage2.this, MyPetActivity.class);
                 startActivity(intent);
             }
         });
