@@ -93,7 +93,7 @@ public class loginActivity extends AppCompatActivity {
                 loadingBar.setCanceledOnTouchOutside(false);
                 loadingBar.show();
 
-                mFAuth.createUserWithEmailAndPassword(mail, password).addOnCompleteListener( new OnCompleteListener<AuthResult>() {
+                mFAuth.signInWithEmailAndPassword(mail, password).addOnCompleteListener( new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
