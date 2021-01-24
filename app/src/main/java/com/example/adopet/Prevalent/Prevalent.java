@@ -1,8 +1,8 @@
 package com.example.adopet.Prevalent;
 
-import com.example.adopet.Model.Users;
+import com.example.adopet.Model.User;
 
 public class Prevalent
 {
-    private static Users currentOnlineUser;
+    private static User currentOnlineUser;
 }

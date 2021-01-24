@@ -1,15 +1,14 @@
 package com.example.adopet.Model;
 
-public class Users {
+public class User {
 
-    private String name, mail, password,role;
+    private String name, mail, password;
 
-    public Users()
+    public User()
     {
         this.name = name;
         this.mail = mail;
         this.password = password;
-        this.role = role;
     }
 
     public String getName() {
@@ -36,11 +35,4 @@ public class Users {
         this.password = password;
     }
 
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
-    }
 }
