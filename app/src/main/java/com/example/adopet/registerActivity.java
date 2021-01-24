@@ -19,6 +19,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
 
 public class registerActivity extends AppCompatActivity{
 
@@ -27,7 +32,7 @@ public class registerActivity extends AppCompatActivity{
     private ProgressDialog loadingBar;
     FirebaseAuth mFAuth;
     Context context = this;
-
+    DatabaseReference reference;
 
 
     @Override
@@ -71,6 +76,20 @@ public class registerActivity extends AppCompatActivity{
                                 Toast.makeText(registerActivity.this, "Register Error", Toast.LENGTH_SHORT).show();
 
                             }else{
+                                String name = InputName.getText().toString();
+                                String mail = InputMail.getText().toString();
+                                String password = InputPassword.getText().toString();
+
+                                FirebaseUser firebaseUser = mFAuth.getCurrentUser();
+                                String userid = firebaseUser.getUid();
+
+                                reference = FirebaseDatabase.getInstance().getReference("Users").child(userid);
+
+                                HashMap<String,String> hashMap = new HashMap<>();
+                                hashMap.put("id", userid);
+                                hashMap.put("username",name);
+                                hashMap.put("password",password);
+                                hashMap.put("mail",mail);
                                 startActivity(new Intent(registerActivity.this, MainActivity.class ));
                             }
                         }

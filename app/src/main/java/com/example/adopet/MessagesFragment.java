@@ -28,7 +28,7 @@ public class MessagesFragment extends Fragment {
         username.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                startActivity(new Intent(getActivity(),SendMessage2.class));
+                startActivity(new Intent(getActivity(),SendMessage.class));
 
             }
         });
@@ -36,7 +36,7 @@ public class MessagesFragment extends Fragment {
         userimage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                startActivity(new Intent(getActivity(),SendMessage2.class));
+                startActivity(new Intent(getActivity(),SendMessage.class));
             }
         });
         return v;

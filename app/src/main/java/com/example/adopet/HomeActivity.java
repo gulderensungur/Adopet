@@ -8,12 +8,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+
 public class HomeActivity extends AppCompatActivity {
 
     private Button LogoutBtn;
     private Button AdopterRole;
     private Button PetOwnerRole;
     Context context = this;
+    FirebaseUser firebaseUser;
+    DatabaseReference reference;
 
 
 
@@ -30,7 +36,7 @@ public class HomeActivity extends AppCompatActivity {
         LogoutBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-
+                FirebaseAuth.getInstance().signOut();
                 Intent intent = new Intent(HomeActivity.this, MainActivity.class);
                 startActivity(intent);
 
