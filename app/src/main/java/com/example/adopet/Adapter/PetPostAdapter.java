@@ -1,5 +1,5 @@
 package com.example.adopet.Adapter;
-
+/*
 import android.content.Context;
 import android.text.format.DateFormat;
 import android.view.LayoutInflater;
@@ -145,3 +145,4 @@ public class PetPostAdapter  extends RecyclerView.Adapter<PetPostAdapter.MyHolde
         }
     }
 }
+*/
