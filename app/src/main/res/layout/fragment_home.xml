@@ -58,7 +58,7 @@
         android:layout_height="103dp"
         android:layout_marginLeft="110dp"
         android:layout_marginTop="90dp"
-        android:text="Pet Specs , we will use Recycler wiev. This is just for demonstration."
+        android:text="If we had database connection, the specs would be shown here"
         android:textColor="#121111"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
