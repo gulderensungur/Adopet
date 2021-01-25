@@ -32,7 +32,7 @@ public class registerActivity extends AppCompatActivity{
     private ProgressDialog loadingBar;
     FirebaseAuth mFAuth;
     Context context = this;
-    DatabaseReference reference;
+    DatabaseReference ref;
 
 
     @Override

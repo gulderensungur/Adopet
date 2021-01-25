@@ -53,7 +53,7 @@ public class AddMyPetActivity extends AppCompatActivity {
     String[] storagePermissions;
 
     FirebaseDatabase firebaseDatabase;
-    DatabaseReference userDbRef;
+    DatabaseReference ref;
     FirebaseUser user;
     FirebaseAuth mFAuth;
     Context context = this;
@@ -81,8 +81,8 @@ public class AddMyPetActivity extends AppCompatActivity {
         mFAuth = FirebaseAuth.getInstance();
         checkUserStatus();
 
-        userDbRef = FirebaseDatabase.getInstance().getReference("Users");
-        Query query = userDbRef.orderByChild("email").equalTo(mail);
+        ref = FirebaseDatabase.getInstance().getReference("Users");
+        Query query = ref.orderByChild("email").equalTo(mail);
         query.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
