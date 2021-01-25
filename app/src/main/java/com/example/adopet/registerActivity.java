@@ -76,20 +76,26 @@ public class registerActivity extends AppCompatActivity{
                                 Toast.makeText(registerActivity.this, "Register Error", Toast.LENGTH_SHORT).show();
 
                             }else{
+
+                                FirebaseUser user = mFAuth.getCurrentUser();
                                 String name = InputName.getText().toString();
-                                String mail = InputMail.getText().toString();
                                 String password = InputPassword.getText().toString();
+                                String mail = user.getEmail();
+                                String userid = user.getUid();
 
-                                FirebaseUser firebaseUser = mFAuth.getCurrentUser();
-                                String userid = firebaseUser.getUid();
 
-                                reference = FirebaseDatabase.getInstance().getReference("Users").child(userid);
-
-                                HashMap<String,String> hashMap = new HashMap<>();
+                                HashMap<Object,String> hashMap = new HashMap<>();
                                 hashMap.put("id", userid);
                                 hashMap.put("username",name);
                                 hashMap.put("password",password);
                                 hashMap.put("mail",mail);
+                                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                                //path the store user data named "Users"
+                                DatabaseReference reference = database.getReference("Users");
+                                //put data within hashmap in db
+                                reference.child(userid).setValue(hashMap);
+
+
                                 startActivity(new Intent(registerActivity.this, MainActivity.class ));
                             }
                         }

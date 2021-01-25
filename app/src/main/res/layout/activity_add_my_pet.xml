@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/paws2"
     android:orientation="vertical"
-    tools:context=".EditMyPetActivity">
+    tools:context=".AddMyPetActivity">
 
 
     <ImageView
@@ -84,56 +84,31 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:background="@drawable/input_design"
-        android:hint="Other Features"
+        android:hint="Pet's Gender"
         android:inputType="text"
         android:padding="20dp"
         android:textColor="@color/colorPrimaryDark"
         android:textColorHint="@color/colorPrimaryDark"
         android:textSize="19sp" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Pet:"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="20sp"
-        android:layout_marginLeft="15dp"/>
-
-    <Spinner
-        android:id="@+id/dogorcat"
+    <EditText
+        android:id="@+id/txt_gender"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:background="@drawable/input_design"
-        android:spinnerMode="dropdown"
-        android:textColor="@color/colorPrimaryDark"/>
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Pet Gender:"
+        android:hint="Other Features"
+        android:padding="20dp"
         android:textColor="@color/colorPrimaryDark"
-        android:layout_marginLeft="15dp"
-        android:textSize="20sp"/>
-
-    <Spinner
-        android:id="@+id/petgender"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:background="@drawable/input_design"
-        android:spinnerMode="dropdown"
-        android:textColor="@color/colorPrimaryDark"/>
+        android:textColorHint="@color/colorPrimaryDark"
+        android:textSize="19sp" />
 
     <Button
         android:id="@+id/btn_create"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/petgender"
+        android:layout_below="@+id/txt_gender"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="15dp"

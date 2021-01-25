@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".pet_profile_for_petownerActivity" />
-        <activity android:name=".EditMyPetActivity" />
+        <activity android:name=".AddMyPetActivity" />
         <activity android:name=".MyPetActivity" />
         <activity android:name=".SendMessage2" />
         <activity android:name=".AllMessages" />

@@ -11,6 +11,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -24,13 +25,16 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.HashMap;
+
 public class loginActivity extends AppCompatActivity {
 
-    private EditText InputMail,InputPassword;
-    private Button LoginButton;
-    private ProgressDialog loadingBar;
+    EditText InputMail,InputPassword;
+    TextView ForgetPassword;
+    Button LoginButton;
+    ProgressDialog loadingBar;
     FirebaseAuth mFAuth;
-    private FirebaseUser firebaseUser;
+    FirebaseUser user;
     Context context = this;
 
 
@@ -41,12 +45,17 @@ public class loginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        ForgetPassword= (TextView)findViewById(R.id.forget_password_link);
         LoginButton = (Button) findViewById(R.id.login_btn);
         InputMail = (EditText) findViewById(R.id.login_mail_input);
         InputPassword = (EditText) findViewById(R.id.login_pwd_input);
         mFAuth = FirebaseAuth.getInstance();
         loadingBar = new ProgressDialog(this);
-        firebaseUser = mFAuth.getCurrentUser(); // authenticated user
+        user = mFAuth.getCurrentUser(); // authenticated user
+
+
+
+
 
 
       LoginButton.setOnClickListener(new View.OnClickListener() {
@@ -73,10 +82,29 @@ public class loginActivity extends AppCompatActivity {
                 loadingBar.setCanceledOnTouchOutside(false);
                 loadingBar.show();
 
+
+
                 mFAuth.signInWithEmailAndPassword(mail, password).addOnCompleteListener( new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+
+//                            //String mail = InputMail.getText().toString();
+//                            String password = InputPassword.getText().toString();
+//                            String mail = user.getEmail();
+//                            String userid = user.getUid();
+//
+//
+//                            HashMap<Object,String> hashMap = new HashMap<>();
+//                            hashMap.put("id", userid);
+//                            hashMap.put("password",password);
+//                            hashMap.put("mail",mail);
+//                            FirebaseDatabase database = FirebaseDatabase.getInstance();
+//                            //path the store user data named "Users"
+//                            DatabaseReference reference = database.getReference("Users");
+//                            //put data within hashmap in db
+//                            reference.child(userid).setValue(hashMap);
+
                             Toast.makeText(loginActivity.this, "Logged in Successfully", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(loginActivity.this, HomeActivity.class));
                         } else {
@@ -90,7 +118,7 @@ public class loginActivity extends AppCompatActivity {
         });
 
     }
-    
+
 
 }
 
